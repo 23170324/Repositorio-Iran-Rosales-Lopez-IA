@@ -31,7 +31,7 @@ public class NodeUtils {
         };
         for (int adjPos : adjacentPositions[zeroPos]) {
             String newState = swapPositions(parentNode.getState(), zeroPos, adjPos);
-            successors.add(new Node(newState, parentNode, adjPos));
+            successors.add(new Node(newState, parentNode));
         }
         return successors;
     }

@@ -14,10 +14,9 @@ public class Node {
         this.cost = cost;
     }
 
-    public Node(String state, Node parent, int depth) {
+    public Node(String state, Node parent) {
         this.state = state;
         this.parent = parent;
-        this.depth = depth;
     }
 
     // Getters y Setters necesarios
