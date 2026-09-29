@@ -75,6 +75,7 @@ public class SearchTree {
                 printPath(currentNode);
                    System.out.println("Tiempo: " + time);
                    System.out.println("Estados visitados: " + visited.size());
+                         System.out.printf("Queue: %d%n", queue.size());
                 return;
             }
             //Si no es el estado objetivo, generar los hijos y agregarlos a la cola
@@ -93,6 +94,9 @@ public class SearchTree {
 
        
         System.out.println("Goal state not found");
+        System.out.println("Tiempo: " + time);
+        System.out.println("Estados visitados: " + visited.size());
+        System.out.printf("Queue: %d%n", queue.size());
     }
 
      public void HeuristicaEjemplo() {
@@ -117,6 +121,7 @@ public class SearchTree {
                 System.out.println("Goal state not found");
                    System.out.println("Tiempo: " + time);
                    System.out.println("Estados visitados: " + visited.size());
+                         System.out.printf("Queue: %d%n", queue.size());
                 return;
             }
             //Si no es el estado objetivo, generar los hijos y agregarlos a la cola
@@ -137,6 +142,9 @@ public class SearchTree {
 
        
         System.out.println("Goal state not found");
+        System.out.println("Tiempo: " + time);
+        System.out.println("Estados visitados: " + visited.size());
+        System.out.printf("Queue: %d%n", queue.size());
     }
 
     public void deepFirstSearch() {
@@ -160,7 +168,6 @@ public class SearchTree {
                 System.out.println("Goal state found: " + currentNode.getState());
                 //Imprimir el camino desde la raiz hasta el nodo objetivo
                 printPath(currentNode);
-                   System.out.println("Goal state not found");
                    System.out.println("Tiempo: " + time);
                    System.out.println("Estados visitados: " + visited.size());
                    System.out.printf("Stack: %d%n", stack.size());
@@ -175,6 +182,9 @@ public class SearchTree {
             }
         }
         System.out.println("Goal state not found");
+        System.out.println("Tiempo: " + time);
+        System.out.println("Estados visitados: " + visited.size());
+        System.out.printf("Stack: %d%n", stack.size());
 
     }
 
@@ -224,6 +234,7 @@ public class SearchTree {
         System.out.println("Goal state not found (o fuera del límite de profundidad)");
         System.out.println("Tiempo: " + time);
         System.out.println("Estados visitados: " + visited.size());
+        System.out.printf("Stack: %d%n", stack.size());
     }
 
     public void iterativeDeepeningSearch() {
@@ -262,6 +273,7 @@ private Node depthLimitedSearchHelper(int limite) {
         if (currentNode.getState().equals(goalState)) {
             System.out.println("Tiempo: " + time);
             System.out.println("Estados visitados: " + visited.size());
+            System.out.printf("Stack: %d%n", stack.size());
             return currentNode;
         }
 
@@ -279,6 +291,9 @@ private Node depthLimitedSearchHelper(int limite) {
             }
         }
     }
+    System.out.println("Tiempo: " + time);
+    System.out.println("Estados visitados: " + visited.size());
+    System.out.printf("Stack: %d%n", stack.size());
     return null;
 }
 

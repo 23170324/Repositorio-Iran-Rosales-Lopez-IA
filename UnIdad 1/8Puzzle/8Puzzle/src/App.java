@@ -7,8 +7,10 @@ public class App {
         String goalState = "12345678 "; // Estado objetivo
         SearchTree searchTree = new SearchTree(initialState, goalState);
         //searchTree.breadthFirstSearch();
-        searchTree.deepFirstSearch();
+        //searchTree.deepFirstSearch();
         //searchTree.UniformCostSearch();
+        searchTree.depthLimitedSearch(60); // Límite de profundidad de 10
+        //searchTree.iterativeDeepeningSearch();
         System.out.println("End");
 
         System.out.println("Initial State: " + initialState);
@@ -19,7 +21,7 @@ public class App {
         }
         
 
-        
+        /* 
         PriorityQueue<Node> queue = new PriorityQueue<>(new NodeComparator());
         Node n1 = new Node("n1", null);
         n1.setCost(5);
@@ -42,5 +44,6 @@ public class App {
             Node node = queue.poll();
             System.out.println(node.getState() + " - Cost: " + node.getCost());
         }
+        */
     }
 }
